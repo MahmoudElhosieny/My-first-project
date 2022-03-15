@@ -1,0 +1,2006 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --coloer1:red;
+    --coloer2:black;
+    --coloer3:white;
+    --coloer4:rgb(255,255,0);
+    --color5:rgb(253, 190, 71);
+    --color6:rgb(71, 192, 47);
+    --color7:rgb(230, 227, 227);
+    --color8: rgb(206, 199, 199);
+    --color9:rgb(253, 167, 7);
+
+    --font1:10px;
+    --font2:15px;
+    --font3:23px;
+    --font4:28px;
+    --font5:20px;
+    --fontf:arial;
+    scroll-behavior: smooth;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+     /* ===== nav bar =======*/
+
+nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    background: no-repeat url(../images/b1.jpg) top center/cover ;
+}
+nav div:first-of-type {
+    width: 20%;
+    height: 80%;
+    text-align: center;
+    line-height: 40px;
+    color: var(--coloer3);
+    font-size: var(--font3);
+    font-family: var(--fontf);
+}
+
+nav div:last-of-type {
+    width: 55%;
+    height: 80%;
+    text-align: center;
+    line-height: 40px;
+    color: var(--coloer3);
+}
+nav div:last-of-type ul{
+    list-style: none;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+nav div:last-of-type ul li{
+    width: 15%;
+    height: 90%;
+    text-align: center;
+    border-radius: 20px;
+}
+nav div:last-of-type ul li a{
+    text-decoration: none;
+    color: var(--coloer3);
+    font-size: var(--font5);
+    font-family: var(--fontf);
+}
+nav div:last-of-type ul li:hover {
+    background-color: var(--coloer3);
+}
+nav div:last-of-type ul li:hover a{
+    color: var(--coloer2);
+}
+
+/* ===== header =======*/
+
+header{
+    width: 100%;
+    height: 800px;
+    border: 1px solid black; 
+    position: relative;
+    background: no-repeat url(../images/b1.jpg) top center/cover;
+}
+header div:first-of-type{
+    border: 5px solid yellow;
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top:325px;
+    left:250px;
+    z-index: 5;
+}
+header div:last-of-type{
+    width: 450px;
+    height: 185px;
+    position: absolute;
+    top:400px;
+    left:360px;
+    z-index: 10;
+    background-color: rgba(255,255,255,.9);
+}
+header div:last-of-type h2{
+    font-size: 30px;
+    font-family: var(--fontf);
+    padding: 10px 0 10px 20px;
+    margin: 20px 0 0 10px;
+}
+header div:last-of-type h1{
+    font-size: 40px;
+    font-family: var(--fontf);
+    margin: 10px 35px;
+    color: var(--color6);
+    font-weight: 600;
+    word-spacing: 15px;
+}
+
+      /* ===== sec1=======*/
+       
+.sec1{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.sec1 div:first-of-type{
+    width: 70%;
+    height: 65%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.sec1 div .card{
+    width: 20%;
+    height: 90%;
+     position: relative;
+     perspective:600px;
+     box-shadow: 0 0 5px gray;
+
+
+}
+.sec1 div .card .the_card{
+  width: 100%;
+  height: 100%;
+  transition: all 2.5s ease;
+  transform-style: preserve-3d ;
+   
+}
+
+span + .card{
+    padding: 10px;
+    font-family: var(--fontf);
+}
+span + .card h2{
+    line-height: 35px;
+}
+span + .card h1{
+    line-height: 30px;
+    color: var(--color5);
+    word-spacing: 8px;
+    
+}
+.back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 10px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    font-family: var(--fontf);
+} 
+.sec1 > div .card .the_card .front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50;
+    backface-visibility: hidden;
+    background:no-repeat url(../images/ab1.jpg) top center/cover;
+} 
+.sec1 > div .card .the_card .front2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50;
+    backface-visibility: hidden;
+    background:no-repeat url(../images/ab2.jpg) top center/cover;
+} 
+.sec1 > div .card .the_card .front3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50;
+    backface-visibility: hidden;
+    background:no-repeat url(../images/ab3.jpg) top center/cover;
+} 
+
+.card:hover .the_card{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+.back h2{
+    line-height: 35px;
+}
+.back h1{
+    line-height: 30px;
+    color: var(--color5);
+    word-spacing: 8px;
+}
+
+/*============== sec2==========*/
+.sec2{
+    width: 100%;
+    height: 400px;
+    background: no-repeat url(../images/b3.jpg)  center/cover;
+    text-align: center;
+    padding: 80px;
+}
+.sec2 h3{
+    font-family: var(--fontf);
+    color: var(--coloer3);
+    line-height: 30px;
+}
+.sec2 h2{
+    font-family: var(--fontf);
+    color: var(--color5) ;
+    line-height: 30px;
+}
+.sec2 .types{
+    width: 75%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-top: 20px;
+}
+.sec2 .types > div{
+    width: 15%;
+    height: 90%;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 25px;
+    font-size: var(--font2);
+    line-height: 30px;
+}
+.sec2 .types > div h3{
+    color:var(--color5);
+    line-height: 20px;
+    text-align: center;
+}
+.sec2 .types > div i{
+    font-size: var(--font4);
+    color: var(--coloer3);
+    line-height: 60px;
+}
+
+/* ===== =====sec3==== ======*/
+
+.sec3{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--coloer3);
+    padding: 70px ;
+}
+.sec3 h3{
+    text-align: center;
+    font-family: var(--fontf);
+    font-weight: 800;
+    line-height: 40px;
+}
+.sec3 h2{
+    text-align: center;
+    font-family: var(--fontf);
+    color: var(--color5);
+    line-height: 40px;
+    font-size: var(--font4);
+}
+.sec3 > .box0{
+    width: 80%;
+    height: 230px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.sec3 .box0 > .box1{
+    width: 30%;
+    height: 90%;
+    padding: 10px; 
+    box-shadow: 0 0 5px gray;
+}
+.box1 h2{
+    color: var(--color6);
+    text-align: left;
+    line-height: 50px;
+}
+.box1> i{
+    font-size: var(--font3);
+    line-height: 50px;
+}
+.sec3 > .box00{
+    width: 80%;
+    height: 230px;
+    margin: auto;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.sec3 .box00 > .box2{
+    width: 30%;
+    height: 90%;
+    padding: 10px; 
+    box-shadow: 0 0 5px gray;
+}
+.box2 h2{
+    color: var(--color6);
+    text-align: left;
+    line-height: 50px;
+}
+.box2> i{
+    font-size: var(--font3);
+    line-height: 50px;
+}
+
+/* ===== sec4=======*/
+.sec4{
+    width: 100%;
+    height: 350px ;
+    position: relative;
+}
+.sec4 .box01{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.sec4 .box01 div {
+    width: 50%;
+    height: 100%;
+}
+.sec4 .box01 div img{
+    width: 100%;
+    height: 100%;
+}
+.sec4 .box01 .special {
+    padding: 100px; 
+    background-color: var(--color7);
+}
+.sec4 .box01 .special h2{
+    font-family: var(--fontf);
+    color: var(--color6);
+    line-height: 80px;
+}
+.sec4 .square{
+    position: absolute;
+    border: 5px solid var(--color6);
+    width: 30%;
+    height: 50%;
+    z-index: 50;
+    top:80px;
+    left: 380px;
+}
+
+/* ==== ==== sec5 === ====*/
+.sec5{
+    width: 100%;
+    height: 650px;
+    padding: 30px;
+}
+.sec5 h3{
+    text-align: center;
+    font-family: var(--fontf);
+    line-height: 40px; 
+}
+.sec5 h2{
+    text-align: center;
+    font-family: var(--fontf);
+    line-height: 40px;
+    color: var(--color5);
+    margin-bottom: 40px;
+}
+.sec5 .Gal0{
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 5px 40px 5px 40px;
+}
+.sec5 .Gal0 > div{
+    width: 49.5%;
+    height: 100%;
+    perspective: 400px;
+    box-shadow: 0 0 15px var(--color8);
+}
+.sec5 .Gal0 .Gal1 .img1:hover  img{
+    transform: rotateX(360deg);
+    cursor: pointer;
+}
+.sec5 .Gal0 .Gal1 .img2:hover  img{
+    transform: rotateX(360deg);
+    cursor: pointer;
+}
+.sec5 .Gal0  .img3:hover  img{
+    transform: rotateX(360deg);
+    cursor: pointer;
+}
+
+.sec5 .Gal0 .Gal1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.sec5 .Gal0 .Gal1 > div {
+    width: 49.5%;
+    height: 100%;
+}
+.sec5 .Gal0 .Gal1  .img1 img{
+    width: 100%;
+    height: 100%;
+    transition: all 2.5s linear;
+}
+.sec5 .Gal0 .Gal1  .img2 img{
+    width: 100%;
+    height: 100%;
+    transition: all 2.5s linear;
+}
+.sec5 .Gal0 .img3 img{
+    width: 100%;
+    height: 100%;
+    transition: all 2.5s linear;
+}
+.sec5 .Gal00{
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 5px 40px 5px 40px;
+}
+.sec5 .Gal00 > div{
+    width: 49.5%;
+    height: 100%;
+    box-shadow: 0 0 15px var(--color8);
+
+}
+.sec5 .Gal00 .Gal2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    perspective: 400px;
+
+}
+.sec5 .Gal00 .Gal2 > div {
+    width: 49.5%;
+    height: 100%;
+}
+.sec5 .Gal00 .img4 img{
+    width: 100%;
+    height: 100%;
+    transition: all 2.5s linear;
+}
+.sec5 .Gal00 .Gal2  .img5 img{
+    width: 100%;
+    height: 100%;
+    transition: all 2.5s linear;
+}
+.sec5 .Gal00 .img6 img{
+    width: 100%;
+    height: 100%;
+    transition: all 2.5s linear;
+}
+.sec5 .Gal00 .img4:hover  img{
+    transform: rotateX(360deg);
+    cursor: pointer;
+}
+.sec5 .Gal00 .Gal2 .img5:hover  img{
+    transform: rotateX(360deg);
+    cursor: pointer;
+}
+.sec5 .Gal00 .Gal2 .img6:hover  img{
+    transform: rotateX(360deg);
+    cursor: pointer;
+}
+
+/* ======= sec6 ==========*/
+
+.sec6{
+    width: 100%;
+    height: 600px;
+}
+.sec6 .coment0{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.sec6 .coment0 .coment1{
+    width: 50%;
+    height: 100%;  
+    background-color: var(--color7);   
+    padding: 50px;
+}
+.sec6 .coment0 .coment1 p{
+    line-height:20px;
+    font-family: var(--fontf);
+    font-size: var(--font2);
+    font-weight: 200;
+}
+.coment1 h2 {
+    color: var(--color6);
+    line-height: 50px;
+    font-size: var(--font4);
+    font-family: var(--fontf);
+}
+.coment1 button{
+    color: var(--coloer3);
+    background-color: var(--coloer2);
+    width: 90px;
+    height: 30px;
+    margin-top: 15px;
+    font-size: var(--font2);
+}
+.coment1 button:hover{
+    color: var(--coloer2);
+    background-color: var(--color6);
+    cursor: pointer;  
+}
+.coment2{
+    width: 50%;
+    height: 100%;  
+    position: relative;
+}
+.coment2 img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+.coment2 p{
+    margin: 50px 0 0 50px ;
+    line-height:20px;
+    font-family: var(--fontf);
+    font-size: var(--font2);
+    font-weight: 200;
+    position: absolute;
+    z-index: 5;
+}
+.coment2 .p2{
+    margin: 0px 0 0 50px ;
+    line-height:20px;
+    font-family: var(--fontf);
+    font-size: var(--font2);
+    font-weight: 200;
+}
+.coment2 h2 {
+    color: var(--color6);
+    line-height: 50px;
+    font-size: var(--font4);
+    margin: 70px 0 0 50px;
+    font-family: var(--fontf);
+}
+.coment2 button{
+    color: var(--coloer3);
+    background-color: var(--coloer2);
+    width: 90px;
+    height: 30px;
+    margin-top: 10px;
+    font-size: var(--font2);
+    margin: 80px 0 0 50px
+}
+.coment2 button:hover{
+    color: var(--coloer2);
+    background-color: var(--color6);
+    cursor: pointer;  
+}
+.sec6 .coment00{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.coment3{
+    width: 50%;
+    height: 100%;  
+    position: relative;
+}
+.coment3 img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+.coment3 p{
+    margin: 50px 0 0 50px ;
+    line-height:20px;
+    font-family: var(--fontf);
+    font-size: var(--font2);
+    font-weight: 200;
+    position: absolute;
+    z-index: 5;
+}
+.coment3 .p3{
+    margin: 0px 0 0 50px ;
+    line-height:20px;
+    font-family: var(--fontf);
+    font-size: var(--font2);
+    font-weight: 200;
+}
+.coment3 h2 {
+    color: var(--color6);
+    line-height: 50px;
+    font-size: var(--font4);
+    margin: 70px 0 0 50px;
+    font-family: var(--fontf);
+}
+.coment3 button{
+    color: var(--coloer3);
+    background-color: var(--coloer2);
+    width: 90px;
+    height: 30px;
+    margin-top: 10px;
+    font-size: var(--font2);
+    margin: 80px 0 0 50px
+}
+.coment3 button:hover{
+    color: var(--coloer2);
+    background-color: var(--color6);
+    cursor: pointer;  
+}
+
+.coment00 .coment4{
+    width: 50%;
+    height: 100%;  
+    background-color: var(--color7);   
+    padding: 50px;
+}
+.coment00 .coment4 p{
+    line-height:20px;
+    font-family: var(--fontf);
+    font-size: var(--font2);
+    font-weight: 200;
+}
+.coment00 .coment4 h2 {
+    color: var(--color6);
+    line-height: 50px;
+    font-size: var(--font4);
+    font-family: var(--fontf);
+
+}
+.coment4 button{
+    color: var(--coloer3);
+    background-color: var(--coloer2);
+    width: 90px;
+    height: 30px;
+    margin-top: 15px;
+    font-size: var(--font2);
+}
+.coment4 button:hover{
+    color: var(--coloer2);
+    background-color: var(--color6);
+    cursor: pointer;  
+}
+
+/* ======= sec7 ==============*/
+
+.sec7{
+    width: 100%;
+    height: 650px;
+    background-color: var(--coloer3);
+    padding: 50px ;
+}
+.sec7 h3{
+    text-align: center;
+    font-family: var(--fontf);
+    line-height: 40px;
+    
+}
+.sec7 h2{
+    text-align: center;
+    font-family: var(--fontf);
+    line-height: 40px;
+    color: var(--color5);
+    margin-bottom: 40px;
+}
+.sec7 .imgs{
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap ;
+}
+.imgs div{
+    width: 20%;
+    height: 90%;
+    position: relative;
+}
+.imgs div img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.imgs div .rate{
+    position: absolute;
+    z-index: 4;
+    width: 80%;
+    height: 20%;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.imgs div .rate .fa-star{
+    z-index: 4;
+    color: var(--color9);
+    font-size: 20px;
+}
+.imgs .data{
+    width: 20%;
+    height: 90%;
+    position: relative;
+    padding: 10px;
+}
+.imgs .data .price{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    position: absolute;
+    margin-top: 8px;
+}
+.imgs .data h2{
+    font-size: var(--font2);
+    text-align: left;
+    line-height: 50px;
+    margin: 0;
+}
+.imgs .data p{
+ color: gray;
+ margin-top: 5px;
+ font-family: var(--fontf);
+ font-size: var(--font2);
+}
+.price button{
+    border: none;
+    color: var(--color6);
+    font-size: var(--font2);
+    font-weight: 700;
+}
+
+/* ====== ==== sec8 ==== =======*/
+
+.sec8{
+    width: 100%;
+    height: 330px;
+    background: no-repeat url(../images/b4.jpg)  center/cover;
+    border: black 1px solid;
+    padding: 80px 0 0 0;
+}
+.sec8 h3{
+    text-align: center;
+    font-family: var(--fontf);
+    line-height: 40px;
+    color: var(--coloer3);
+}
+.sec8 h2{
+    text-align: center;
+    font-family: var(--fontf);
+    line-height: 40px;
+    color: var(--color5);
+    margin-bottom: 40px;
+}
+form{
+    width: 35%;
+    height: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(250, 255, 240,.4);
+}
+fieldset{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+}
+fieldset .email{
+    width: 60%;
+    height: 80%;
+    border: none;
+}
+fieldset .sub{
+    width: 35%;
+    height: 80%;
+    background-color: green;
+    color: var(--coloer3);
+    font-size: var(--font2);
+    border: none;
+}
+fieldset .sub:hover{
+    background-color: var(--color6);
+    cursor: pointer;
+}
+
+/* ======= ===== sec9 ===== ==========*/ 
+
+.sec9{
+    width: 100%;
+    height: 600px;
+    background-color: var(--coloer3);
+    padding-top: 60px;
+}
+.sec9 h3{
+    text-align: center;
+    font-family: var(--fontf);
+    line-height: 40px;
+    color: var(--coloer2);
+    
+}
+.sec9 h2{
+    text-align: center;
+    font-family: var(--fontf);
+    line-height: 40px;
+    color: var(--color5);
+    margin-bottom: 40px;
+}
+
+.sec9 div{
+    width: 70%;
+    height: 65%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sec9 div div{
+    width: 45%;
+    height: 90%;
+    position: relative;
+
+}
+.sec9 div > .mab > map > iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.forma{
+    position: relative;
+}
+.forma .div1{
+    width: 95%;
+    height: 20%;
+    position: absolute;
+    top: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.div1 form{
+    width: 100%;
+    height: 80%;
+}
+.forma .div1 form fieldset{
+    width: 95%;
+    height: 100%;
+}
+.forma .div1 form fieldset .fname{
+    width: 95%;
+    height: 70%;
+}
+.forma .div2{
+    width: 95%;
+    height: 20%;
+    position: absolute;
+    top: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.div2 form{
+    width: 100%;
+    height: 80%;
+}
+.forma .div2 form fieldset{
+    width: 95%;
+    height: 100%;
+}
+.forma .div2 form fieldset .fname{
+    width: 95%;
+    height: 70%;
+}
+.forma .div3{
+    width: 95%;
+    height: 50%;
+    position: absolute;
+    top: 120px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.div3 form{
+    width: 100%;
+    height: 90%;
+}
+.forma .div3 form fieldset{
+    width: 98%;
+    height: 100%;
+}
+.forma .div3 form fieldset textarea{
+    width: 100%;
+    height: 100%;
+}
+.forma .div4{
+    width: 95%;
+    height: 10%;
+    position: absolute;
+    top: 280px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.div4 form{
+    width: 100%;
+    height: 100%;
+}
+.forma .div4 form fieldset{
+    width: 98%;
+    height: 100%;
+}
+.forma .div4 form fieldset input{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    color: var(--coloer3);
+    font-size: var(--font3);
+}
+.forma .div4 form fieldset input:hover{
+    background-color: var(--color6);
+    cursor: pointer;
+}
+
+/* ====== sec10 ========== */
+
+.sec10{
+    width: 100%;
+    height: 350px;
+    background-color: rgb(43, 40, 40);
+    border: 1px black solid;
+    padding: 50px;
+    text-align: center;
+}
+.sec10 p{
+    color: var(--coloer3);
+    line-height: 40px;
+}
+.sec10 .icons{
+    width: 15%;
+    height: 20%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.icons .fa-facebook{
+    color: blue;
+    font-size: var(--font4);
+    background-color: var(--coloer3);
+    transition: all 1s linear;
+}
+.icons .fa-facebook:hover{
+    cursor: pointer;
+    transform: scale(1.4);
+}
+.icons .fa-twitter-square{
+    color: rgb(12, 183, 250);
+    font-size: var(--font4);
+    background-color: var(--coloer3);
+    transition: all 1s linear;
+}
+.icons .fa-twitter-square:hover{
+    cursor: pointer;
+    transform: scale(1.4);
+}
+.icons .fa-youtube{
+    color: red;
+    font-size: var(--font4);
+    background-color: var(--coloer3);
+    transition: all 1s linear;
+}
+.icons .fa-youtube:hover{
+    cursor: pointer;
+    transform: scale(1.4);
+}
+.sec10 .up{
+    width: 15%;
+    height: 20%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.up .fa-arrow-up{
+    color: var(--coloer3);
+    font-size: var(--font4);
+    transition: all 1s linear;
+}
+.up .fa-arrow-up:hover{
+    cursor: pointer;
+    transform: scale(1.4);
+}
+marquee{
+    width: 100%;
+    height: 60px;
+    background-color: var(--coloer2);
+    color: var(--coloer3);
+    font-size: var(--font3);
+    padding: 20px;
+}
+
+/* ========= the end ===================================*/
+
+/* ========= Media quary  ===================================*/
+
+@media screen and (min-width: 900px) and (max-width: 1400px) {
+
+    nav{
+        height: 50px;
+    }
+    nav div:first-of-type {
+        font-size: 20px;
+    } 
+    nav div:last-of-type {
+        width: 60%;
+    }
+ 
+    nav div:last-of-type ul li a{
+        font-size: 15px;
+    }
+    /* ===== header =======*/
+    
+    header{
+        height: 650px;
+    }
+    header div:first-of-type{
+        width: 40%;
+        height: 25%;
+        top:285px;
+    }
+    header div:last-of-type{
+        width: 40%;
+        height: 25%;
+        top:340px;
+        left:340px;
+    }
+    header div:last-of-type h2{
+        font-size: 25px;
+    }
+    header div:last-of-type h1{
+        font-size: 32px;
+        margin: 25px 35px;
+        word-spacing: 5px;
+    }
+    
+          /* ===== sec1=======*/
+           
+    
+    .sec1 div:first-of-type{
+        width: 85%;
+        height: 60%;
+    }
+    
+    .sec1 div .card{
+        width: 20%;
+        height: 90%;
+        overflow: hidden;
+    }
+    
+    
+    span + .card h2{
+        line-height: 20px;
+        font-size: 20px;
+    }
+    span + .card h1{
+        line-height: 20px;
+        font-size: 23px;    
+    }
+    
+    .back h2{
+        line-height: 20px;
+        font-size: 20px;
+    }
+    .back h1{
+        line-height: 25px;
+        font-size: 23px;
+        word-spacing: 5px;
+    }
+    
+    /*============== sec2==========*/
+    .sec2{
+        padding: 60px;
+    }
+    .sec2 h3{
+        font-size: 20px;
+    }
+    .sec2 h2{
+       font-size: 23px;
+    }
+    .sec2 .types{
+        width: 100%;
+    }
+    .sec2 .types > div{
+        width: 130px;
+        padding: 15px;
+        line-height: 20px;
+    }
+    .sec2 .types > div h3{
+        line-height: 20px;
+        font-size: 18px;
+    }
+    .sec2 .types > div i{
+        font-size: 25px;
+    }
+    
+    /* ===== =====sec3==== ======*/
+    
+    .sec3{
+        padding: 40px ;
+    }
+    .sec3 h3{ 
+      font-size: 20px;
+      font-weight: 650;
+    }
+    .sec3 h2{
+        font-size: 23px;
+    }
+    .sec3 > .box0{
+        width: 90%;
+    }
+    .sec3 .box0 > .box1{
+        width: 240px;
+        overflow: hidden;
+    }
+    .box1 h2{
+        font-size: 23px;
+    }
+    .box1> i{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .sec3 > .box00{
+        width: 90%;
+    }
+    .sec3 .box00 > .box2{
+        width: 240px;
+        overflow: hidden;
+    }
+    .box2 h2{
+        font-size: 20px;
+    }
+    .box2> i{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    
+    /* ===== sec4=======*/
+    
+    .sec4 .box01{
+        width: 100%;
+    }
+
+    .sec4 .box01 div {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .sec4 .box01 .special {
+        padding: 50px; 
+       
+    }
+    .sec4 .box01 .special h2{
+       font-size: 23px;
+        line-height: 60px;
+    }
+    .sec4 .square{
+        width: 30%;
+        height: 40%;
+        top:100px;
+        left: 220px;
+    }
+    
+    /* ==== ==== sec5 === ====*/
+    .sec5{
+        padding: 20px;
+        height: 1400px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .sec5 h3{
+    line-height: 30px; 
+    /* border: 1px black solid; */
+    font-size: 25px;
+  
+    }
+    .sec5 h2{
+    font-size: 30px;
+    line-height: 30px;
+     margin-bottom: 0px;
+     /* border: 1px black solid; */
+     
+    }
+    .sec5 .Gal0{
+        width: 95%;
+        /* border: 1px black solid; */
+        margin-top: 50px;
+        height:550px ;
+    }
+    .sec5 .Gal0 > div{
+        width: 700px;
+        height: 250px;
+        margin: auto;
+    }
+    
+    .sec5 .Gal00{
+        width: 95%;
+        /* border: 1px black solid; */
+        margin-top: 0px;
+        height:550px ;
+    }
+    .sec5 .Gal00 > div{
+        width: 700px;
+        height: 250px;
+        margin: auto;
+    }
+   
+    /* ======= sec6 ==========*/
+
+    .sec6{
+        height: 1100px;
+    }
+    
+    .sec6 .coment0{
+        width: 98%;
+        margin: auto;
+    }
+    .sec6 .coment0 .coment1{
+        width: 700px;
+        margin: auto;
+        height: 50%;     
+    }
+    .sec6 .coment0 .coment1 p{
+        font-weight: 100;
+    }
+    .coment1 h2 {
+        font-size: var(--font3);
+    }
+    
+    .coment2{
+        width: 700px;
+        margin: auto;
+        height: 50%;  
+        position: relative;
+        margin-top: 5px;
+    }
+    .coment2 p{
+        font-weight: 100;
+    
+    }
+    .coment2 .p2{
+        font-weight: 100;
+    }
+    .coment2 h2 {
+        font-size: var(--font3); 
+    }
+    
+    
+    .sec6 .coment00{
+        width: 98%;
+        height: 280px;
+        margin: auto;
+
+    }
+    
+    .coment3{
+        width: 700px;
+        margin: auto;
+        height: 250px;   
+        margin-top: 10px; 
+    }
+   
+    .coment3 p{
+        font-weight: 100;
+    }
+    .coment3 .p3{
+     font-weight: 100;
+    }
+    .coment3 h2 {
+     font-size: var(--font3);
+    }
+    
+    .coment00 .coment4{
+        width: 700px;
+        height: 250px;
+        margin: auto;  
+        margin-top: 5px; 
+        padding: 50px;
+    }
+    .coment00 .coment4 p{
+        font-weight: 100;
+    }
+    .coment00 .coment4 h2 {
+        font-size: var(--font3);
+    }
+ 
+    /* ======= sec7 ==============*/
+    
+    .sec7{
+        width: 100%;
+        height: 600px;
+        padding: 30px ;
+    }
+    .sec7 h3{
+       font-size: 20px;    
+    }
+    .sec7 h2{
+        line-height: 30px;
+        margin-bottom: 20px;
+        font-size: 23px;
+    }
+    .sec7 .imgs{
+        width: 98%;
+    }
+    .imgs div{
+        width: 23%;
+    }
+    
+    .imgs div .rate{
+        width: 70%;
+    }
+    .imgs div .rate .fa-star{
+        font-size: 17px;
+    }
+    .imgs .data{
+        width: 23%;
+        
+    }
+    .imgs .data .price{
+        width: 78%;
+    }
+   
+    /* ====== ==== sec8 ==== =======*/
+    
+    .sec8{
+        height: 300px;
+        padding: 40px 0 0 0;
+    }
+    
+    .sec8 h2{
+        margin-bottom: 30px;
+    }
+    form{
+        width: 50%;
+        height: 25%;
+    }
+    fieldset{
+        width: 95%;
+        height:60%;
+        
+    }
+    
+    
+    /* ======= ===== sec9 ===== ==========*/ 
+    
+    .sec9{
+        height: 560px;
+        padding-top: 40px;
+    }
+    .sec9 h3{
+        line-height: 30px;   
+    }
+    .sec9 h2{
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .sec9 div{
+        width: 95%;
+        height: 70%;
+    }
+    
+    .sec9 div div{
+        width: 49%;
+        height: 85%;
+    }
+    
+    
+    /* ====== sec10 ========== */
+    
+    .sec10{
+        height: 230px;
+    }
+    .sec10 p{
+        line-height: 30px;
+    }
+    .sec10 .icons{
+        width: 25%;
+        height: 30%;
+    }
+  
+   
+    
+    
+   
+    .sec10 .up{
+        width: 20%;
+        height: 25%;
+        padding: 10px;
+    }
+    .up .fa-arrow-up{
+        font-size: var(--font3);
+    }
+   
+    marquee{
+        height: 40px;
+        background-color: var(--coloer2);
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    /* ========= the end =======================*/
+  
+}
+
+/* ========= Media quary  ===================================*/
+
+@media screen and (min-width: 400px) and (max-width: 900px) {
+
+    nav{
+        height:45px;
+    }
+    nav div:first-of-type {
+        font-size: 10px;
+    } 
+    nav div:last-of-type {
+        width: 75%;
+    }
+    nav div:last-of-type ul li{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+    }
+ 
+    nav div:last-of-type ul li a{
+        font-size: 10px;
+       
+    }
+    /* ===== header =======*/
+    
+    header{
+        height: 550px;
+    }
+    header div:first-of-type{
+        width: 50%;
+        height: 25%;
+        top:250px;
+        left: 100px;
+    }
+    header div:last-of-type{
+        width: 50%;
+        height: 25%;
+        top:300px;
+        left:170px;
+    }
+    header div:last-of-type h2{
+        font-size: 18px;
+    }
+    header div:last-of-type h1{
+        font-size: 20px;
+        margin: 20px 20px;
+        word-spacing: 5px;
+    }
+    
+          /* ===== sec1=======*/
+    
+    .sec1{
+        height: 600px;
+        padding-top: 10px;
+        position: relative;
+
+          }
+
+    .sec1 .container{
+        width: 650px;
+        height: 90%;
+    
+        position: absolute;
+        top: 40px;
+        justify-content: space-around;
+       
+    }
+    .sec1 div .card{
+        width: 150px;
+        height: 200px;
+        overflow: hidden;
+        margin-top: 5px;
+        
+    }
+    span + .card h2{
+        line-height: 15px;
+        font-size: 15px;
+    }
+    span + .card h1{
+        line-height: 20px;
+        font-size: 16px;    
+        word-spacing: 2px;
+    }
+    span + .card p{
+        line-height: 12px;
+        font-size: 10px;      
+    }
+    
+    .back h2{
+        line-height: 15px;
+        font-size: 15px;
+    }
+    .back h1{
+        line-height: 20px;
+        font-size: 16px;
+        word-spacing: 2px;
+    }
+    .back p{
+        line-height: 12px;
+        font-size: 10px;      
+    }
+    /*============== sec2==========*/
+    .sec2{
+        padding: 25px;
+    }
+    .sec2 h3{
+        font-size: 16px;
+    }
+    .sec2 h2{
+       font-size: 20px;
+    }
+    .sec2 .types{
+        width: 100%;
+    }
+    .sec2 .types > div{
+        width: 120px;
+        padding: 15px;
+        line-height: 20px;
+        margin: 5px ;
+    }
+    .sec2 .types > div h3{
+        line-height: 30px;
+        font-size: 17px;
+    }
+    .sec2 .types > div i{
+        font-size: 23px;
+    }
+    
+    /* ===== =====sec3==== ======*/
+    
+    .sec3{
+        padding: 20px ;
+        height:1250px;
+        display: flex;
+        align-items: center;
+        flex-flow:row wrap ;
+    }
+    .sec3 h3{ 
+      font-size: 20px;
+      font-weight: 650;
+      margin-left: 60px;
+      margin: auto;
+    }
+    .sec3 .title{
+        font-size: 23px;
+        margin-left: 60px;  
+        margin: auto;
+        
+    }
+    .sec3 > .box0{
+        width: 95%;
+        margin: 0 0 10px 0;
+        height: 500px;
+        margin: auto;
+    }
+    .sec3 .box0 > .box1{
+        width: 300px;
+        overflow: hidden;
+        height: 180px;
+    }
+    .box1 h2{
+        font-size: 23px;
+    }
+    .box1> i{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .sec3 > .box00{
+        width: 95%;
+        margin:0px 0 20px 0;
+        height: 500px;
+        margin: auto;
+    }
+    .sec3 .box00 > .box2{
+        width: 300px;
+        overflow: hidden;
+        height: 180px;
+    }
+    .box2 h2{
+        font-size: 20px;
+    }
+    .box2> i{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    
+    /* ===== sec4=======*/
+
+    .sec4{
+        width: 100%;
+        height: 600px;
+    }
+    
+    .sec4 .box01{
+        width: 95%;
+        height: 650px;
+        margin: auto;
+        margin: 10px 10px 100px 10px;
+        justify-content: space-between;
+    }
+
+    .sec4 .box01 div {
+        width: 450px;
+        height: 300px;
+        margin: auto;
+        overflow: hidden;
+       
+    }
+    
+    .sec4 .box01 .special {
+        width: 450px;
+        height: 300px;
+        padding: 50px; 
+        margin: 5px 10px 20px 10px;
+        margin: auto;
+        position: relative;
+       
+    }
+    .sec4 .box01 .special h2{
+       font-size: 23px;
+        line-height: 60px;
+    }
+    .sec4 .square{
+        width: 300px;
+        height: 80px;
+        top:290px;
+        left: 120px;
+        position: absolute;
+    }
+    
+    /* ==== ==== sec5 === ====*/
+    .sec5{
+        padding: 5px;
+        height: 1250px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 50px;
+    }
+    .sec5 h3{
+    line-height: 20px; 
+    font-size: 22px;
+    }
+    .sec5 h2{
+    font-size: 26px;
+    line-height: 20px;
+     margin-bottom: 0px;
+    }
+    .sec5 .Gal0{
+        width: 95%;
+        /* border: 1px black solid; */
+        margin-top: 50px;
+        height:550px ;
+    }
+    .sec5 .Gal0 > div{
+        width: 700px;
+        height: 250px;
+        margin: auto;
+    }
+    
+    .sec5 .Gal00{
+        width: 95%;
+        /* border: 1px black solid; */
+        margin-top: 0px;
+        height:550px ;
+    }
+    .sec5 .Gal00 > div{
+        width: 700px;
+        height: 250px;
+        margin: auto;
+    }
+   
+    /* ======= sec6 ==========*/
+
+    .sec6{
+        height: 1300px;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap column;
+        position: relative;
+    }
+    
+    .sec6 .coment0{
+        width: 95%;
+        margin: auto;
+        position: absolute;
+        margin: 10px;
+    }
+    .sec6 .coment0 .coment1{
+        width: 700px;
+        margin: auto;
+        height: 50%;   
+        margin-bottom: 5px;  
+    }
+    .sec6 .coment0 .coment1 p{
+        font-weight: 100;
+    }
+    .coment1 h2 {
+        font-size: var(--font3);
+    }
+    
+    .coment2{
+        width: 700px;
+        margin: auto;
+        height: 50%;  
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .coment2 p{
+        font-weight: 100;
+    
+    }
+    .coment2 .p2{
+        font-weight: 100;
+    }
+    .coment2 h2 {
+        font-size: var(--font3); 
+    }
+    .coment2 button{
+        margin-top: 110px;
+    }
+    
+    
+    .sec6 .coment00{
+        width: 95%;
+        height: 280px;
+        margin: auto;
+        position: absolute;
+        top: 580px;
+        margin: 100px 10px 10px 10px;
+
+    }
+    
+    .coment3{
+        width: 700px;
+        margin: auto;
+        height: 290px;   
+        /* margin: 10px 0 10px 0;  */
+    }
+   
+    .coment3 p{
+        font-weight: 100;
+    }
+    .coment3 .p3{
+     font-weight: 100;
+    }
+    .coment3 h2 {
+     font-size: var(--font3);
+    }
+    .coment3 button{
+        margin-top: 120px;
+
+    }
+    
+    .coment00 .coment4{
+        width: 700px;
+        height: 290px;
+        margin: auto;  
+        margin-top: 5px; 
+        padding: 50px;
+    }
+    .coment00 .coment4 p{
+        font-weight: 100;
+    }
+    .coment00 .coment4 h2 {
+        font-size: var(--font3);
+    }
+ 
+    /* ======= sec7 ==============*/
+    
+    .sec7{
+        width: 100%;
+        height: 600px;
+        padding: 5px ;
+    }
+    .sec7 h3{
+       font-size: 20px;    
+    }
+    .sec7 h2{
+        line-height: 30px;
+        margin-bottom: 20px;
+        font-size: 23px;
+    }
+    .sec7 .imgs{
+        width: 100%;
+    }
+    .imgs div{
+        width: 24%;
+        height: 130px;
+    }
+    
+    .imgs div .rate{
+        width: 90%;
+    }
+    .imgs div .rate .fa-star{
+        font-size: 10px;
+    }
+    .imgs .data{
+        width: 24.5%;
+        height: 230px;
+        overflow: hidden; 
+        box-shadow: 0 0 10px var(--color7);
+    }
+    .imgs .data h2{
+        line-height: 18px;
+    }
+    .imgs .data .price{
+        width: 78%;
+    }
+   
+    /* ====== ==== sec8 ==== =======*/
+    
+    .sec8{
+        height: 280px;
+        padding: 40px 0 0 0;
+    }
+    
+    .sec8 h2{
+        margin-bottom: 30px;
+    }
+    form{
+        width: 75%;
+        height: 25%;
+    }
+    fieldset{
+        width: 95%;
+        height:60%;
+        
+    }
+    /* ======= ===== sec9 ===== ==========*/ 
+    
+    .sec9{
+        height: 500px;
+        padding-top: 30px;
+    }
+    .sec9 h3{
+        line-height: 30px;   
+    }
+    .sec9 h2{
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .sec9 div{
+        width: 99%;
+        height: 80%;
+    }
+    
+    .sec9 div div{
+        width: 49%;
+        height: 85%;
+    }
+    
+    
+    /* ====== sec10 ========== */
+    
+    .sec10{
+        height: 210px;
+    }
+    .sec10 p{
+        line-height: 30px;
+    }
+    .sec10 .icons{
+        width: 50%;
+        height: 40%;
+    }
+  
+    .sec10 .up{
+        width: 25%;
+        height: 25%;
+        padding: 5px;
+    }
+    .up .fa-arrow-up{
+        font-size: var(--font2);
+    }
+   
+    marquee{
+        height: 30px;
+        background-color: var(--coloer2);
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    /* ========= the end =======================*/
+
+
+
+    
+}
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
